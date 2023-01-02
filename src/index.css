@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +11,82 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* ----- add task */
+.addtask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.addtask button {
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 50px;
+  margin-top: 10px;
+  /* border-radius: 4px; */
+  cursor: pointer;
+  font-weight: 600;
+  color: #28292d !important;
+  text-align: center;
+  z-index: 12;
+}
+
+.addtask button:active {
+  opacity: 0.8;
+}
+
+.authentication .inputBox input:valid~i,
+.authentication .inputBox input:focus~i {
+  height: 44px;
+}
+.authentication .addtask.inputBox input:focus~button {
+  height: 44px;
+  border-left: 1px solid black;
+}
+
+
+.authentication .task.inputBox span {
+  position: absolute;
+  left:0;
+  bottom:0;
+
+
+
+  pointer-events: none;
+  z-index: 9;
+}
+.tasks span {
+  background:#45f3ff;
+  min-height:44px !important;
+  width:100%;
+  display:block;
+  padding:10px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color:#23242a;
+}
+.main-task .box {
+  position: relative;
+  height:200px !important; 
+  overflow: scroll !important;
+  background-color:#28292d !important;
+}
+.main-task .box::-webkit-scrollbar {
+  display: none;
+}
+
+.main-task .box::before {
+  min-height:200px !important;
+}
+.main-task .box::after {
+  min-height:200px !important;
+}
+.header {
+  background-color:#28292d !important;
+  bottom:0 !important;
+  color:white !important;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
